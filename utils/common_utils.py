@@ -59,7 +59,7 @@ def get_image_grid(images_np, nrow=8):
     
     return torch_grid.numpy()
 
-def plot_image_grid(images_np, nrow =8, factor=1, interpolation='lanczos', fig_store=False):
+def plot_image_grid(images_np, nrow =8, factor=1, interpolation='lanczos'):
     """Draws images in a grid
     
     Args:
@@ -83,8 +83,6 @@ def plot_image_grid(images_np, nrow =8, factor=1, interpolation='lanczos', fig_s
         plt.imshow(grid.transpose(1, 2, 0), interpolation=interpolation)
     
     plt.show()
-    if fig_store:
-        plt.savefig("test1_dip_2000.jpg")
     
     return grid
 
